@@ -21,7 +21,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.js"></script>
   <script>
-    // In CHALLENGEs 1-8 you will write JavaScript statements to assign certain values to the "result" variables.
+    // In CHALLENGES 1-8 you will write JavaScript statements to assign certain values to the "result" variables.
     // (The "result" variables below are declared with let so we can assign values to them later.)
     let result1, result2, result3, result4, result5, result6, result7, result8;
 
@@ -55,7 +55,7 @@
     const val2 = 'kjwerhgmsdsdjkgfuxcibnwufhyuaywqhevckergjmdqlcitelcrhklerhmklm';
     const val3 = 'ksljdrghmkjetrhgmrkejtdsafhjhfdswqegxzoeutewhqwmthrekidjltrem';
     // 🧠 pseudocode:
-    // Statement 1: declare a variable using const, assigning to it the concatenation of val1, val2 and val2.
+    // Statement 1: declare a variable using const, assigning to it the concatenation of val1, val2, and val3.
     // Statement 2: assign to result3 the number of characters in the concatenated string.
     // ❗ Note: the number of characters in a string can be found using DOT length. Example:
     //    const someString = 'abc';
@@ -100,7 +100,7 @@
     // Statement 1: declare a variable with const, holding a Boolean: whether both friend1 and friend2 are of the same type.
     // Statement 2: declare a variable with const, holding a Boolean: whether both friend3 and friend4 are of the same type.
     // Statement 3: assign to result7 whether any of your variables holds the Boolean true.
-    // Statement 4: assign result7 to be itself minus number 13.
+    // Statement 4: assign result7 to be itself minus number 23.
 
     // 👉 CHALLENGE 8
     const winter = 0;
@@ -124,7 +124,7 @@
       ['98f13708210194c475687be6106a3b84', result4],
       ['34173cb38f07f89ddbebc2ac9128303f', result5],
       ['66d8c0f4ab3c3681ff3f9093b05136a6', result6],
-      ['29fe3cef22985ae07803bf456b8947dc', result7],
+      ['8d2b9e08aff3573e99ce7966a0dd4628', result7],
       ['4a47d2983c8bd392b120b627e0e1cab4', result8],
     ]
     function buildFinalResult(results) {
@@ -136,9 +136,15 @@
         const letter = isCorrect ? fromNumToLetter(result) : alphabet[Math.floor(Math.random() * 26)]
         chars.push(letter)
       })
-      verse.textContent = `${chars[0]}read softl${chars[1]} be${chars[2]}ause
-      yo${chars[3]} tr${chars[4]}ad ${chars[5]}n ${chars[6]}y ${chars[7]}reams`
-
+      verse.textContent = `
+        ${chars[2]}r${chars[4]}a${chars[0]}${chars[4]},
+        inn${chars[5]}va${chars[0]}${chars[4]},
+        an${chars[7]}
+        ${chars[2]}hang${chars[4]}
+        ${chars[1]}${chars[5]}${chars[3]}r
+        ${chars[6]}${chars[5]}rl${chars[7]}
+        ${chars[6]}i${chars[0]}h
+        ${chars[2]}${chars[5]}${chars[7]}${chars[4]}`
       function fromNumToLetter(num) {
         const abs = Math.abs(num)
         const result = alphabet[abs < 26 ? abs : abs % 26]
